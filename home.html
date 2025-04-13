@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Formulaire pour télécharger un fichier -->
+<form id="uploadForm" action="php/upload.php" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="video/*,image/*">
+    <button type="submit">Uploader</button>
+  </form>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Open Tok</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Barre de navigation -->
+  <header class="navbar">
+    <div class="logo">Open Tok</div>
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Explorer</a></li>
+        <li><a href="#">Shorts</a></li>
+        <li><a href="#">Profil</a></li>
+        <li><a href="#">Paramètres</a></li>
+      </ul>
+    </nav>
+    <div class="user-info">
+      <img src="images/default-profile.png" alt="Profil" class="profile-pic">
+      <span id="username">NomUtilisateur</span>
+    </div>
+  </header>
+
+  <!-- Contenu principal -->
+  <main>
+    <section class="video-feed" id="videoFeed">
+      <p class="empty-message">C'est désert ici...</p>
+    </section>
+  </main>
+
+  <!-- Bouton pour ajouter une vidéo ou une photo -->
+  <footer class="upload-bar">
+    <input type="file" id="fileUpload" accept="video/*,image/*" hidden>
+    <button onclick="document.getElementById('fileUpload').click()">+ Ajouter une vidéo/photo</button>
+  </footer>
+
+  <script src="js/app.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+
